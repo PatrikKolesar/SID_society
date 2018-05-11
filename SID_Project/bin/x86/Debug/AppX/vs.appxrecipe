@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>508498f7-028e-4079-978c-ccb7db7b8bc3</PackageIdentityName>
     <PackageIdentityPublisher>CN=patok</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Marek\Source\Repos\SID_society2\SID_Project\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>45CA1C314135F558D999227F613D8A820E24D8D7C1BC81B020544345C7E833EA</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>508498f7-028e-4079-978c-ccb7db7b8bc3_1.0.0.0_x86__vj19mv6z9nvgc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>508498f7-028e-4079-978c-ccb7db7b8bc3_vj19mv6z9nvgc!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-09T17:37:32.252</Modified>
+      <Modified>2018-05-11T14:32:50.882</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\SID_Project.exe">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\SID_Project.exe">
       <PackagePath>entrypoint\SID_Project.exe</PackagePath>
-      <Modified>2018-05-09T17:37:31.242</Modified>
+      <Modified>2018-05-11T14:32:49.674</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -495,76 +495,76 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T07:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\dd91ee50c064f73e8850935026027086.jpg">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\dd91ee50c064f73e8850935026027086.jpg">
       <PackagePath>Assets\dd91ee50c064f73e8850935026027086.jpg</PackagePath>
       <Modified>2018-05-09T17:29:02.629</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-05-09T17:29:02.660</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2018-05-09T17:29:02.551</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.567</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.582</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.598</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.613</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2018-05-09T17:29:02.613</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\SID_Project.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\SID_Project.xr.xml">
       <PackagePath>SID_Project.xr.xml</PackagePath>
       <Modified>2018-05-09T17:37:31.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-05-09T17:37:31.130</Modified>
+      <Modified>2018-05-11T14:32:49.531</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\View\LoginPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\View\LoginPage.xbf">
       <PackagePath>View\LoginPage.xbf</PackagePath>
-      <Modified>2018-05-09T17:37:31.130</Modified>
+      <Modified>2018-05-11T14:32:49.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\View\ScientistPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\View\ScientistPage.xbf">
       <PackagePath>View\ScientistPage.xbf</PackagePath>
-      <Modified>2018-05-09T17:37:31.130</Modified>
+      <Modified>2018-05-11T14:32:49.533</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-09-29T01:28:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-09T17:37:31.983</Modified>
+      <Modified>2018-05-11T14:32:50.503</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\bin\x86\Debug\Core\SID_Project.exe">
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society2\SID_Project\bin\x86\Debug\Core\SID_Project.exe">
       <PackagePath>SID_Project.exe</PackagePath>
-      <Modified>2018-05-09T17:37:32.249</Modified>
+      <Modified>2018-05-11T14:32:50.871</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
