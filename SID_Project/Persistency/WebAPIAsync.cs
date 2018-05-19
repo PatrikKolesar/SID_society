@@ -44,9 +44,16 @@ namespace SID_Project.Persistency
 
                 if (rTask.Result.IsSuccessStatusCode)
                 {
+
                     var cTask = rTask.Result.Content.ReadAsStringAsync();
+                    
+
                 }
+
+                return null;
             }
+
         }
+
     }
 }
