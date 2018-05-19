@@ -96,7 +96,12 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="e\PrelaunchActivated.cs" />
+    <Compile Include="Persistency\IWebAPIAsync.cs" />
     <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TaskSingleton.cs" />
+    <Compile Include="Persistency\WebAPIAsync.cs" />
+    <Compile Include="Persistency\WebAPITest.cs" />
+    <Compile Include="ViewModel\TaskVM.cs" />
     <Compile Include="View\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -142,7 +147,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Folder Include="Handler\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

@@ -63,5 +63,10 @@ namespace SID_Project.View
             ppup3.IsOpen = false;
 
         }
+
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

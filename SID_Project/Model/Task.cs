@@ -17,5 +17,14 @@ namespace SID_Project.Model
         public string Instrument { get; set; }
         public string Schedule { get; set; }
 
+        public Task (int taskId)
+        {
+            TaskID = taskId;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Task id {0}", TaskID);
+        }
     }
 }
