@@ -10,6 +10,9 @@ namespace StationLogWebAPI.Models
         public StationLogModel()
             : base("name=StationLogModel")
         {
+            base.Configuration.LazyLoadingEnabled = false;
+            base.Configuration.ProxyCreationEnabled = false;
+
         }
 
         public virtual DbSet<Employee> Employees { get; set; }
