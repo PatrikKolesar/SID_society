@@ -95,8 +95,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Common\DateTimeConverter.cs" />
+    <Compile Include="Common\INotifyPropertyChanged.cs" />
+    <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="e\PrelaunchActivated.cs" />
     <Compile Include="Model\Task.cs" />
+    <Compile Include="Model\TaskCatalogSingleton.cs" />
+    <Compile Include="Persistency\PersistencyService.cs" />
+    <Compile Include="ViewModel\TaskHandler.cs" />
+    <Compile Include="ViewModel\TaskViewModel.cs" />
     <Compile Include="View\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -140,9 +147,12 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.1.2</Version>
     </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
+    <Folder Include="e\NewFolder1\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

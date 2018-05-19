@@ -1,1 +1,1 @@
-C:\Users\Marek\Source\Repos\SID_society2\SID_Project\SID_Project.csproj;arm
+D:\School_1.0\SID!\SID_Project\SID_Project.csproj;arm

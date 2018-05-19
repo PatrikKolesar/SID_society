@@ -5,6 +5,7 @@
     xmlns:local="using:SID_Project.View"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:SID_Project.ViewModel"
     mc:Ignorable="d">
 
     <Grid>
@@ -13,6 +14,11 @@
                 ImageSource="../Assets/dd91ee50c064f73e8850935026027086.jpg" Opacity="0.8"></ImageBrush>
 
         </Grid.Background>
+
+        <Grid.DataContext>
+            <viewModel:TaskViewModel/>
+        </Grid.DataContext>
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
             <RowDefinition/>
@@ -56,17 +62,26 @@
                 </StackPanel>
                 <AppBarButton x:ConnectionId='12' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
                 <StackPanel Grid.Column="0" Grid.Row="1">
-                  <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="ID: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right"  FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Notes: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Station: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Comment: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Station ID: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Username: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Instrument: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Schedule: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Date: " ></TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="1">
-                    <TextBox Width="500"></TextBox>
-                    <TextBox Width="500"></TextBox>
-                    <TextBox Width="500"></TextBox>
+                    <TextBox Width="500" Text="{Binding TaskId, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding Content, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding Comment, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding StationId, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding Username, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding Instrument, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding Schedule, Mode=TwoWay}"></TextBox>
+                    <DatePicker Width="500" Date="{Binding Date, Mode=TwoWay}"/>
                 </StackPanel>
-                <Button Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
+                <Button Grid.Column="0" Grid.Row="1" Command="{Binding CreateTaskCommand, Mode=TwoWay}"  Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
             </Grid>
         </Popup>
 
@@ -130,17 +145,21 @@
                     <TextBlock Text="Details" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <AppBarButton x:ConnectionId='10' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
-                <StackPanel Grid.Column="0" Grid.Row="1">
-                        <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="ID: "></TextBlock>
-                        <TextBlock HorizontalAlignment="Right"  FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
-                        <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Notes: "></TextBlock>
-                        <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Station: " ></TextBlock>
+                <StackPanel  Grid.Column="0" Grid.Row="1">
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Content: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Staion ID: "></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Date: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Instrument: " ></TextBlock>
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Schedule: " ></TextBlock>
                     </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="1">
-                    <TextBlock Width="500"></TextBlock>
-                    <TextBlock Width="500"></TextBlock>
-                    <TextBlock Width="500"></TextBlock>
-                    <TextBlock Width="500"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.TaskId, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Content, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Stationid, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Date, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Instrument, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Schedule, Mode=TwoWay}"></TextBlock>
                 </StackPanel>
             </Grid>
         </Popup>
@@ -148,13 +167,13 @@
 
 
 
-        <Popup x:ConnectionId='4' Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ppup2"  IsLightDismissEnabled="True" >
+        <Popup x:ConnectionId='4' Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ppup2" IsLightDismissEnabled="True" >
             <Popup.ChildTransitions>
                 <TransitionCollection>
                     <PaneThemeTransition Edge="Left" />
                 </TransitionCollection>
             </Popup.ChildTransitions>
-            <Grid Background="White" BorderBrush="Black" Width="1400" Height="900" Margin="230,10,0,0">
+           <Grid Background="White" BorderBrush="Black" Width="1400" Height="900" Margin="230,10,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="2*"/>
@@ -167,182 +186,38 @@
                     <TextBlock Text="Notes" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
                 <AppBarButton x:ConnectionId='9' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
-                <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2">
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="ID: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right"  FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Notes: "></TextBlock>
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" Text="Station: " ></TextBlock>
-                </StackPanel>
-                </Grid>
+                
+             <StackPanel Grid.Column="0" Grid.Row="1" >
+                   <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Comment, Mode=TwoWay}"></TextBlock>
+             </StackPanel>
+              
+            </Grid>
         </Popup>
+        
+        
+        
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center">
+            <TextBlock HorizontalAlignment="Center" Text="Task List"  FontSize="30"></TextBlock>
+        </StackPanel>
 
-
-        <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False" >
-            <StackPanel Margin="520,0,0,0"  VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock HorizontalAlignment="Center" Text="Task List"  FontSize="30"></TextBlock>
-            </StackPanel>
+        <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False" IsItemClickEnabled="True"  ItemsSource="{Binding TasksCollection}" 
+                  SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <RelativePanel>
+           
             <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
+                <TextBlock VerticalAlignment="Center" Text="{Binding TaskId, Mode=TwoWay}" FontSize="25"></TextBlock>
+                <TextBlock VerticalAlignment="Center"  Text="{Binding Content, Mode=TwoWay}" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
                 <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
                     <Button x:ConnectionId='7' Content="Show Details" Width="100" HorizontalAlignment="Center"                           ></Button>
                     <Button x:ConnectionId='8' Content="Show Notes" Width="100" HorizontalAlignment="Center"                          ></Button>
                 </StackPanel>
                 <CheckBox Margin="40,0,0,0" />
             </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="ID" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="This is a place where you can type your Description of Task Number ID" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Add Note" Width="100" HorizontalAlignment="Center" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" ></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
-            </StackPanel>
+                    </RelativePanel>
+                </DataTemplate>
+                </ListView.ItemTemplate>
 
 
         </ListView>
@@ -430,7 +305,7 @@
                 
                 <Button x:ConnectionId='5' Grid.Column="0" Content="Create" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"                         ></Button>
                 <Button x:ConnectionId='6' Grid.Column="1" Content="Edit" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"                          ></Button>
-                <Button Grid.Column="2" Content="Delete" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"></Button>
+                <Button Grid.Column="2" Content="Delete" Command="{Binding DeleteTaskCommand, Mode=TwoWay}" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"></Button>
             </Grid>
         </Grid>
 

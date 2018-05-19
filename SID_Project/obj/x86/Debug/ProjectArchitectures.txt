@@ -1,1 +1,1 @@
-C:\Users\Marek\Desktop\School\SID_society-master\SID_society-master\SID_Project\SID_Project.csproj;x86
+D:\School_1.0\SID!\SID_Project\SID_Project.csproj;x86
