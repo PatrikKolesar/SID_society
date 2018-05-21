@@ -12,19 +12,20 @@ namespace SID_Project.Model
     {
         private static TaskCatalogSingleton instance;
 
-        private ObservableCollection<Task> taskCollection;
+        private ObservableCollection<Task> taskCollection { get; set; }
 
+        private WebAPIAsync<Task> taskApiAsync;
         private TaskCatalogSingleton()
         {
-            taskCollection = new ObservableCollection<Task>()
-            {
-                new Task(1, "content1", "comment1", 1, "username1", DateTime.Now, "instrument1", "schedule1"),
-                new Task(2, "content2", "comment2", 2, "username2", DateTime.Today, "instrument2", "schedule2"),
-                new Task(3, "content3", "comment3", 3, "username3", DateTime.Now, "instrument3", "schedule3"),
-                new Task(4, "content4", "comment4", 4, "username4", DateTime.Now, "instrument4", "schedule4"),
-                new Task(5, "content5", "comment5", 5, "username5", DateTime.Now, "instrument5", "schedule5"),
-                new Task(6, "content6", "comment6", 6, "username6", DateTime.Now, "instrument6", "schedule6"),
-            };
+            taskCollection = LoadDataToObservableCollection();
+        }
+
+        public ObservableCollection<Task> LoadDataToObservableCollection()
+        {
+            WebAPIAsync<Task> retrievedCatalog = new WebAPIAsync<Task>();
+            Task<ObservableCollection<Task>> table = retrievedCatalog.Load("Tasks");
+            ObservableCollection<Task> collection = table.Result;
+            return collection;
         }
 
         public static TaskCatalogSingleton Instance
