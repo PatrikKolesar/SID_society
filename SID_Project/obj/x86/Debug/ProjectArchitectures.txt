@@ -1,1 +1,1 @@
-D:\School_1.0\SID!\SID_Project\SID_Project.csproj;x86
+C:\Users\patok\Desktop\19.5.2018\SID_Project\SID_Project.csproj;x86

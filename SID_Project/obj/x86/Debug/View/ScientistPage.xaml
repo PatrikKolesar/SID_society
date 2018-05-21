@@ -218,8 +218,6 @@
                     </RelativePanel>
                 </DataTemplate>
                 </ListView.ItemTemplate>
-
-
         </ListView>
 
         

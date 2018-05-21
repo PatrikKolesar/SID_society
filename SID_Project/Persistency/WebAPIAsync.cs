@@ -46,7 +46,7 @@ namespace SID_Project.Persistency
                 {
 
                     var cTask = rTask.Result.Content.ReadAsStringAsync();
-                    
+
 
                 }
 

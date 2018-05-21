@@ -62,14 +62,14 @@ namespace SID_Project.Model
 
         // Serialization Methods
 
-        public void SaveTasks(ObservableCollection<Task> savedAsJsonObservableCollection)
-        {
-            PersistencyService.SaveTasksAsJsonAsync(savedAsJsonObservableCollection);
-        }
+    //    public void SaveTasks(ObservableCollection<Task> savedAsJsonObservableCollection)
+    //    {
+    //        PersistencyService.SaveTasksAsJsonAsync(savedAsJsonObservableCollection);
+    //    }
 
-        public async void LoadTasks()
-        {
-            await PersistencyService.LoadTasksFromJasonAsync();
-        }
+    //    public async void LoadTasks()
+    //    {
+    //        await PersistencyService.LoadTasksFromJasonAsync();
+    //    }
     }
 }

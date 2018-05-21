@@ -27445,11 +27445,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\School_1.0\\SID!\\SID_Project\\SID_Project.csproj",
+      "projectUniqueName": "C:\\Users\\patok\\Desktop\\19.5.2018\\SID_Project\\SID_Project.csproj",
       "projectName": "SID_Project",
-      "projectPath": "D:\\School_1.0\\SID!\\SID_Project\\SID_Project.csproj",
+      "projectPath": "C:\\Users\\patok\\Desktop\\19.5.2018\\SID_Project\\SID_Project.csproj",
       "packagesPath": "C:\\Users\\patok\\.nuget\\packages\\",
-      "outputPath": "D:\\School_1.0\\SID!\\SID_Project\\obj\\",
+      "outputPath": "C:\\Users\\patok\\Desktop\\19.5.2018\\SID_Project\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

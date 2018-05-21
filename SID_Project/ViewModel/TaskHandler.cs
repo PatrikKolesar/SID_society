@@ -35,7 +35,7 @@ namespace SID_Project.ViewModel
                
                 
             _taskViewModel.TaskCatalogSingleton.DoAddTask(createdTask);
-            _taskViewModel.TaskCatalogSingleton.SaveTasks(_taskViewModel.TasksCollection);
+            //_taskViewModel.TaskCatalogSingleton.SaveTasks(_taskViewModel.TasksCollection);
 
         }
 
