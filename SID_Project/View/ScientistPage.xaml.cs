@@ -43,6 +43,11 @@ namespace SID_Project.View
             ppup1.IsOpen = true;
 
         }
+        private void ButtonClickClose(object sender, RoutedEventArgs e)
+        {
+            ppup.IsOpen = false;
+
+        }
 
         private void ButtonClickPopUp2(object sender, RoutedEventArgs e)
         {

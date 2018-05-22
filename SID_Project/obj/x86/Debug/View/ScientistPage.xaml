@@ -30,7 +30,7 @@
 
         <CommandBar Background="Gray" Grid.ColumnSpan="2" Height="55" IsOpen="True">
             <AppBarSeparator/>
-            <AppBarButton x:ConnectionId='13' Icon="Back"                          />
+            <AppBarButton x:ConnectionId='14' Icon="Back"                          />
             <AppBarButton Icon="Message"  />
             <AppBarButton Icon="Up" />
             <CommandBar.Content>
@@ -72,7 +72,7 @@
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Date: " ></TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="1">
-                    <TextBox Width="500" Text="{Binding TaskId, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" ></TextBox>
                     <TextBox Width="500" Text="{Binding Content, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Comment, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding StationId, Mode=TwoWay}"></TextBox>
@@ -81,7 +81,7 @@
                     <TextBox Width="500" Text="{Binding Schedule, Mode=TwoWay}"></TextBox>
                     <DatePicker Width="500" Date="{Binding Date, Mode=TwoWay}"/>
                 </StackPanel>
-                <Button Grid.Column="0" Grid.Row="1" Command="{Binding CreateTaskCommand, Mode=TwoWay}"  Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
+                <Button x:ConnectionId='13' Grid.Column="0" Grid.Row="1" Command="{Binding CreateTaskCommand, Mode=TwoWay}"                           Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
             </Grid>
         </Popup>
 

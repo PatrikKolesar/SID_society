@@ -4,7 +4,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SID_Project.Handler;
 using SID_Project.Persistency;
+using SID_Project.ViewModel;
 
 namespace SID_Project.Model
 {
@@ -12,22 +14,34 @@ namespace SID_Project.Model
     {
         private static TaskCatalogSingleton instance;
 
-        private ObservableCollection<Task> taskCollection { get; set; }
-
-        private WebAPIAsync<Task> taskApiAsync;
+        private ObservableCollection<Task> TaskCollection { get; set; }
+        private WebAPIAsyncLoad<Task> taskApiAsync;
         private TaskCatalogSingleton()
         {
-            taskCollection = LoadDataToObservableCollection();
+            TaskCollection = LoadDataToObservableCollection();
         }
-
+        // Load data to collection
         public ObservableCollection<Task> LoadDataToObservableCollection()
         {
-            WebAPIAsync<Task> retrievedCatalog = new WebAPIAsync<Task>();
+            WebAPIAsyncLoad<Task> retrievedCatalog = new WebAPIAsyncLoad<Task>();
             Task<ObservableCollection<Task>> table = retrievedCatalog.Load("Tasks");
             ObservableCollection<Task> collection = table.Result;
             return collection;
         }
+        public void DoDeleteTask(Task deletedTask)
+        {
+            int key = deletedTask.TaskId;
+            WebAPIAsyncDelete<Task> deleteTask = new WebAPIAsyncDelete<Task>();
+            deleteTask.Delete("Tasks",key);
+            TaskCollection.Remove(deletedTask);
+        }
 
+        public void DoAddTask(Task addedTask)
+        {
+            WebAPIAsyncCreate<Task> createTask = new WebAPIAsyncCreate<Task>();
+            createTask.Create(addedTask, "Tasks");
+            TaskCollection.Add(addedTask);
+        }
         public static TaskCatalogSingleton Instance
         {
             get
@@ -46,20 +60,14 @@ namespace SID_Project.Model
 
         public ObservableCollection<Task> GetTaskCatalogSingleton()
         {
-            return taskCollection;
+            return TaskCollection;
         }
 
         //   Add an event to the collection.
 
-        public void DoAddTask(Task addedTask)
-        {
-            taskCollection.Add(addedTask);
-        }
 
-        public void DoDeleteTask(Task deletedTask)
-        {
-            taskCollection.Remove(deletedTask);
-        }
+
+
 
         // Serialization Methods
 

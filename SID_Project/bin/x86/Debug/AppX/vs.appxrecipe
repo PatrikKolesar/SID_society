@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-21T15:27:48.255</Modified>
+      <Modified>2018-05-22T17:46:51.116</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\SID_Project.exe">
       <PackagePath>entrypoint\SID_Project.exe</PackagePath>
-      <Modified>2018-05-21T15:27:47.678</Modified>
+      <Modified>2018-05-22T17:46:50.851</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -575,7 +575,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\View\ScientistPage.xbf">
       <PackagePath>View\ScientistPage.xbf</PackagePath>
-      <Modified>2018-05-21T08:59:37.768</Modified>
+      <Modified>2018-05-21T23:31:03.090</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -584,11 +584,11 @@
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-21T08:59:39.171</Modified>
+      <Modified>2018-05-21T23:18:11.115</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\Core\SID_Project.exe">
       <PackagePath>SID_Project.exe</PackagePath>
-      <Modified>2018-05-21T15:27:48.245</Modified>
+      <Modified>2018-05-22T17:46:51.112</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
