@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-22T17:46:51.116</Modified>
+      <Modified>2018-05-23T15:59:15.778</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\SID_Project.exe">
       <PackagePath>entrypoint\SID_Project.exe</PackagePath>
-      <Modified>2018-05-22T17:46:50.851</Modified>
+      <Modified>2018-05-23T15:59:15.528</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\.nuget\packages\microsoft.csharp\4.3.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -523,6 +523,10 @@
       <PackagePath>Assets\dd91ee50c064f73e8850935026027086.jpg</PackagePath>
       <Modified>2018-05-21T08:49:25.323</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\Assets\wallhaven-472783.jpg">
+      <PackagePath>Assets\wallhaven-472783.jpg</PackagePath>
+      <Modified>2018-05-23T15:43:34.521</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2018-05-21T08:49:25.335</Modified>
@@ -563,19 +567,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\SID_Project.xr.xml">
       <PackagePath>SID_Project.xr.xml</PackagePath>
-      <Modified>2018-05-21T08:49:26.199</Modified>
+      <Modified>2018-05-23T15:44:55.798</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2018-05-21T08:59:37.767</Modified>
+      <Modified>2018-05-23T15:43:56.474</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\View\LoginPage.xbf">
       <PackagePath>View\LoginPage.xbf</PackagePath>
-      <Modified>2018-05-21T08:59:37.768</Modified>
+      <Modified>2018-05-23T15:43:56.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\View\ScientistPage.xbf">
       <PackagePath>View\ScientistPage.xbf</PackagePath>
-      <Modified>2018-05-21T23:31:03.090</Modified>
+      <Modified>2018-05-23T15:59:15.363</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -584,11 +588,11 @@
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-21T23:18:11.115</Modified>
+      <Modified>2018-05-23T15:43:57.545</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\bin\x86\Debug\Core\SID_Project.exe">
       <PackagePath>SID_Project.exe</PackagePath>
-      <Modified>2018-05-22T17:46:51.112</Modified>
+      <Modified>2018-05-23T15:59:15.774</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

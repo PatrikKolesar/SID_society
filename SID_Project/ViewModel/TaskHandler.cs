@@ -49,7 +49,7 @@ namespace SID_Project.ViewModel
 
             else
             {
-                _taskViewModel.TaskCatalogSingleton.DoDeleteTask(_taskViewModel.SelectedTask);
+                _taskViewModel.TaskCatalogSingleton.DoDeleteTaskAsync(_taskViewModel.SelectedTask);
             }
 
         }

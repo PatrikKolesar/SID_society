@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SID_Project.Persistency
 {
-    public interface IWebAPIAsyncCreate<T>
+    public interface IWebAapiAsyncCreate<T>
     { 
 
         Task<ObservableCollection<T>> Create(T obj,string table);

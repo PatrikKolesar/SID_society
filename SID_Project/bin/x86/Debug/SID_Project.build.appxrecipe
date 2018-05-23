@@ -391,6 +391,9 @@
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\Assets\dd91ee50c064f73e8850935026027086.jpg">
       <PackagePath>Assets\dd91ee50c064f73e8850935026027086.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\Assets\wallhaven-472783.jpg">
+      <PackagePath>Assets\wallhaven-472783.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Marek\Source\Repos\SID_society\SID_Project\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>

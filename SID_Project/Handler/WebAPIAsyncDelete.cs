@@ -13,14 +13,14 @@ using SID_Project.Persistency;
 
 namespace SID_Project.Handler
 {
-    class WebAPIAsyncDelete<T> : IWebAPIAsyncDelete<T> where T : class
+        public class WebAPIAsyncDelete<T> : IWebAPIAsyncDelete<T> where T : class
     {
         private string _serverURL = "http://localhost:64060";
         private string _apiPrefix = "api";
         private HttpClientHandler _httpClientHandler;
         private HttpClient _httpClient;
 
-        public Task<ObservableCollection<T>> Delete(string table, int key)
+        public async Task<ObservableCollection<T>> Delete(string table, int key)
         {
             _httpClientHandler = new HttpClientHandler() { UseDefaultCredentials = true };
             using (_httpClient = new HttpClient(_httpClientHandler))
@@ -29,13 +29,23 @@ namespace SID_Project.Handler
                 _httpClient.DefaultRequestHeaders.Clear();
                 _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
                 try
-                {               
-                    Task<HttpResponseMessage> rTask = _httpClient.DeleteAsync($"{_serverURL}/{_apiPrefix}/{table}/{key}");
+                {
+                    Task<HttpResponseMessage> rTask =  _httpClient.DeleteAsync($"{_serverURL}/{_apiPrefix}/{table}/{key}");
+                    if (rTask != null)
+                    {
+                        if (rTask.Result.IsSuccessStatusCode)
+                        {
+                            string url = _serverURL + "/" + _apiPrefix + "/" + table + "/" + key;
+                            await _httpClient.DeleteAsync(url);                            
+                        }
+                        
+                    }
+
 
                 }
                 catch (Exception ex)
                 {
-                    new MessageDialog(ex.Message).ShowAsync();
+                    await new MessageDialog(ex.Message).ShowAsync();
                 }
 
                 return null;

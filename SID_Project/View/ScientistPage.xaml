@@ -11,7 +11,7 @@
     <Grid>
         <Grid.Background>
             <ImageBrush
-                ImageSource="../Assets/dd91ee50c064f73e8850935026027086.jpg" Opacity="0.8"></ImageBrush>
+                ImageSource="../Assets/wallhaven-472783.jpg" Opacity="0.8"></ImageBrush>
 
         </Grid.Background>
 
@@ -42,7 +42,7 @@
         
         
         
-         <Popup Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ppup"  IsLightDismissEnabled="True" >
+         <Popup Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" x:Name="ppup"  IsLightDismissEnabled="True">
             <Popup.ChildTransitions>
                 <TransitionCollection>
                     <PaneThemeTransition Edge="Left" />
@@ -62,7 +62,7 @@
                 </StackPanel>
                 <AppBarButton Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonClickPopUpClose"></AppBarButton>
                 <StackPanel Grid.Column="0" Grid.Row="1">
-                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
+                    <!--<TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>-->
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Comment: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Station ID: " ></TextBlock>
@@ -200,7 +200,7 @@
             <TextBlock HorizontalAlignment="Center" Text="Task List"  FontSize="30"></TextBlock>
         </StackPanel>
 
-        <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False" IsItemClickEnabled="True"  ItemsSource="{Binding TasksCollection}" 
+        <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False"  IsItemClickEnabled="True"  ItemsSource="{Binding TasksCollection}" 
                   SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>

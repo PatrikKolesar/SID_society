@@ -28,15 +28,15 @@ namespace SID_Project.Model
             ObservableCollection<Task> collection = table.Result;
             return collection;
         }
-        public void DoDeleteTask(Task deletedTask)
+        public async void DoDeleteTaskAsync(Task deletedTask)
         {
             int key = deletedTask.TaskId;
             WebAPIAsyncDelete<Task> deleteTask = new WebAPIAsyncDelete<Task>();
-            deleteTask.Delete("Tasks",key);
+            await deleteTask.Delete("Tasks", key);
             TaskCollection.Remove(deletedTask);
         }
 
-        public void DoAddTask(Task addedTask)
+        public  void DoAddTask(Task addedTask)
         {
             WebAPIAsyncCreate<Task> createTask = new WebAPIAsyncCreate<Task>();
             createTask.Create(addedTask, "Tasks");

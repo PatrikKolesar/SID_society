@@ -12,14 +12,14 @@ using SID_Project.Persistency;
 
 namespace SID_Project.Handler
 {
-    class WebAPIAsyncCreate<T> : IWebAPIAsyncCreate<T> where T : class 
+        public class WebAPIAsyncCreate<T> : IWebAapiAsyncCreate<T> where T : class 
     {
         private string _serverURL = "http://localhost:64060";
         private string _apiPrefix = "api";
         private HttpClientHandler _httpClientHandler;
         private HttpClient _httpClient;
 
-        public Task<ObservableCollection<T>> Create(T obj, string table)
+        public  async Task<ObservableCollection<T>> Create(T obj, string table)
         {
             _httpClientHandler = new HttpClientHandler() {UseDefaultCredentials = true};
             using (_httpClient = new HttpClient(_httpClientHandler))
@@ -30,7 +30,9 @@ namespace SID_Project.Handler
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(obj);
-                    var response = _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    //var response = _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+
+                        await _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json"));
 
                 }
                 catch (Exception ex)
