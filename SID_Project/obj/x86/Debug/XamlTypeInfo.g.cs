@@ -132,43 +132,55 @@ namespace SID_Project.SID_Project_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[17];
+            _typeNameTable = new string[23];
             _typeNameTable[0] = "SID_Project.View.LoginPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "SID_Project.ViewModel.TaskViewModel";
-            _typeNameTable[4] = "SID_Project.Common.NotifyPropertyChanged";
-            _typeNameTable[5] = "Object";
-            _typeNameTable[6] = "SID_Project.Model.TaskCatalogSingleton";
-            _typeNameTable[7] = "System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Task>";
-            _typeNameTable[8] = "System.Collections.ObjectModel.Collection`1<SID_Project.Model.Task>";
-            _typeNameTable[9] = "SID_Project.Model.Task";
-            _typeNameTable[10] = "Int32";
-            _typeNameTable[11] = "String";
-            _typeNameTable[12] = "System.DateTimeOffset";
-            _typeNameTable[13] = "System.ValueType";
-            _typeNameTable[14] = "SID_Project.ViewModel.TaskHandlerClass";
-            _typeNameTable[15] = "SID_Project.Common.RelayCommand";
-            _typeNameTable[16] = "SID_Project.View.ScientistPage";
+            _typeNameTable[4] = "SID_Project.ViewModel.StationViewModel";
+            _typeNameTable[5] = "SID_Project.Common.NotifyPropertyChanged";
+            _typeNameTable[6] = "Object";
+            _typeNameTable[7] = "SID_Project.Model.TaskCatalogSingleton";
+            _typeNameTable[8] = "System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Task>";
+            _typeNameTable[9] = "System.Collections.ObjectModel.Collection`1<SID_Project.Model.Task>";
+            _typeNameTable[10] = "SID_Project.Model.Task";
+            _typeNameTable[11] = "Int32";
+            _typeNameTable[12] = "String";
+            _typeNameTable[13] = "System.DateTimeOffset";
+            _typeNameTable[14] = "System.ValueType";
+            _typeNameTable[15] = "SID_Project.ViewModel.TaskHandlerClass";
+            _typeNameTable[16] = "SID_Project.Common.RelayCommand";
+            _typeNameTable[17] = "SID_Project.Model.StationCatalogSingleton";
+            _typeNameTable[18] = "System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Station>";
+            _typeNameTable[19] = "System.Collections.ObjectModel.Collection`1<SID_Project.Model.Station>";
+            _typeNameTable[20] = "SID_Project.Model.Station";
+            _typeNameTable[21] = "SID_Project.ViewModel.StationHandlerClass";
+            _typeNameTable[22] = "SID_Project.View.ScientistPage";
 
-            _typeTable = new global::System.Type[17];
+            _typeTable = new global::System.Type[23];
             _typeTable[0] = typeof(global::SID_Project.View.LoginPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::SID_Project.ViewModel.TaskViewModel);
-            _typeTable[4] = typeof(global::SID_Project.Common.NotifyPropertyChanged);
-            _typeTable[5] = typeof(global::System.Object);
-            _typeTable[6] = typeof(global::SID_Project.Model.TaskCatalogSingleton);
-            _typeTable[7] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Task>);
-            _typeTable[8] = typeof(global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Task>);
-            _typeTable[9] = typeof(global::SID_Project.Model.Task);
-            _typeTable[10] = typeof(global::System.Int32);
-            _typeTable[11] = typeof(global::System.String);
-            _typeTable[12] = typeof(global::System.DateTimeOffset);
-            _typeTable[13] = typeof(global::System.ValueType);
-            _typeTable[14] = typeof(global::SID_Project.ViewModel.TaskHandlerClass);
-            _typeTable[15] = typeof(global::SID_Project.Common.RelayCommand);
-            _typeTable[16] = typeof(global::SID_Project.View.ScientistPage);
+            _typeTable[4] = typeof(global::SID_Project.ViewModel.StationViewModel);
+            _typeTable[5] = typeof(global::SID_Project.Common.NotifyPropertyChanged);
+            _typeTable[6] = typeof(global::System.Object);
+            _typeTable[7] = typeof(global::SID_Project.Model.TaskCatalogSingleton);
+            _typeTable[8] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Task>);
+            _typeTable[9] = typeof(global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Task>);
+            _typeTable[10] = typeof(global::SID_Project.Model.Task);
+            _typeTable[11] = typeof(global::System.Int32);
+            _typeTable[12] = typeof(global::System.String);
+            _typeTable[13] = typeof(global::System.DateTimeOffset);
+            _typeTable[14] = typeof(global::System.ValueType);
+            _typeTable[15] = typeof(global::SID_Project.ViewModel.TaskHandlerClass);
+            _typeTable[16] = typeof(global::SID_Project.Common.RelayCommand);
+            _typeTable[17] = typeof(global::SID_Project.Model.StationCatalogSingleton);
+            _typeTable[18] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Station>);
+            _typeTable[19] = typeof(global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Station>);
+            _typeTable[20] = typeof(global::SID_Project.Model.Station);
+            _typeTable[21] = typeof(global::SID_Project.ViewModel.StationHandlerClass);
+            _typeTable[22] = typeof(global::SID_Project.View.ScientistPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -205,21 +217,37 @@ namespace SID_Project.SID_Project_XamlTypeInfo
 
         private object Activate_0_LoginPage() { return new global::SID_Project.View.LoginPage(); }
         private object Activate_3_TaskViewModel() { return new global::SID_Project.ViewModel.TaskViewModel(); }
-        private object Activate_4_NotifyPropertyChanged() { return new global::SID_Project.Common.NotifyPropertyChanged(); }
-        private object Activate_7_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Task>(); }
-        private object Activate_8_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Task>(); }
-        private object Activate_9_Task() { return new global::SID_Project.Model.Task(); }
-        private object Activate_16_ScientistPage() { return new global::SID_Project.View.ScientistPage(); }
-        private void VectorAdd_7_ObservableCollection(object instance, object item)
+        private object Activate_4_StationViewModel() { return new global::SID_Project.ViewModel.StationViewModel(); }
+        private object Activate_5_NotifyPropertyChanged() { return new global::SID_Project.Common.NotifyPropertyChanged(); }
+        private object Activate_8_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Task>(); }
+        private object Activate_9_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Task>(); }
+        private object Activate_10_Task() { return new global::SID_Project.Model.Task(); }
+        private object Activate_18_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Station>(); }
+        private object Activate_19_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Station>(); }
+        private object Activate_20_Station() { return new global::SID_Project.Model.Station(); }
+        private object Activate_22_ScientistPage() { return new global::SID_Project.View.ScientistPage(); }
+        private void VectorAdd_8_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::SID_Project.Model.Task>)instance;
             var newItem = (global::SID_Project.Model.Task)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_8_Collection(object instance, object item)
+        private void VectorAdd_9_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::SID_Project.Model.Task>)instance;
             var newItem = (global::SID_Project.Model.Task)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_18_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::SID_Project.Model.Station>)instance;
+            var newItem = (global::SID_Project.Model.Station)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_19_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::SID_Project.Model.Station>)instance;
+            var newItem = (global::SID_Project.Model.Station)item;
             collection.Add(newItem);
         }
 
@@ -249,7 +277,7 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 break;
 
             case 3:   //  SID_Project.ViewModel.TaskViewModel
-                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SID_Project.Common.NotifyPropertyChanged"));
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SID_Project.ViewModel.StationViewModel"));
                 userType.Activator = Activate_3_TaskViewModel;
                 userType.AddMemberName("TaskCatalogSingleton");
                 userType.AddMemberName("TasksCollection");
@@ -260,7 +288,7 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 userType.AddMemberName("TaskId");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Comment");
-                userType.AddMemberName("StationId");
+                userType.AddMemberName("StationTaskId");
                 userType.AddMemberName("Username");
                 userType.AddMemberName("Date");
                 userType.AddMemberName("Instrument");
@@ -269,45 +297,58 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  SID_Project.Common.NotifyPropertyChanged
-                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_NotifyPropertyChanged;
+            case 4:   //  SID_Project.ViewModel.StationViewModel
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("SID_Project.Common.NotifyPropertyChanged"));
+                userType.Activator = Activate_4_StationViewModel;
+                userType.AddMemberName("StationCatalogSingleton");
+                userType.AddMemberName("StationsCollection");
+                userType.AddMemberName("StationHandler");
+                userType.AddMemberName("SelectedStation");
+                userType.AddMemberName("StationId");
+                userType.AddMemberName("StationName");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Object
+            case 5:   //  SID_Project.Common.NotifyPropertyChanged
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_NotifyPropertyChanged;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  Object
                 xamlType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  SID_Project.Model.TaskCatalogSingleton
+            case 7:   //  SID_Project.Model.TaskCatalogSingleton
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Task>
+            case 8:   //  System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Task>
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<SID_Project.Model.Task>"));
-                userType.CollectionAdd = VectorAdd_7_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_8_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 8:   //  System.Collections.ObjectModel.Collection`1<SID_Project.Model.Task>
+            case 9:   //  System.Collections.ObjectModel.Collection`1<SID_Project.Model.Task>
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_8_Collection;
-                userType.CollectionAdd = VectorAdd_8_Collection;
+                userType.Activator = Activate_9_Collection;
+                userType.CollectionAdd = VectorAdd_9_Collection;
                 xamlType = userType;
                 break;
 
-            case 9:   //  SID_Project.Model.Task
+            case 10:   //  SID_Project.Model.Task
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_9_Task;
+                userType.Activator = Activate_10_Task;
                 userType.AddMemberName("TaskId");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Comment");
-                userType.AddMemberName("Stationid");
+                userType.AddMemberName("Stationtaskid");
                 userType.AddMemberName("Username");
                 userType.AddMemberName("Date");
                 userType.AddMemberName("Instrument");
@@ -316,42 +357,79 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 10:   //  Int32
+            case 11:   //  Int32
                 xamlType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  String
+            case 12:   //  String
                 xamlType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  System.DateTimeOffset
+            case 13:   //  System.DateTimeOffset
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  System.ValueType
+            case 14:   //  System.ValueType
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 14:   //  SID_Project.ViewModel.TaskHandlerClass
-                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 15:   //  SID_Project.Common.RelayCommand
+            case 15:   //  SID_Project.ViewModel.TaskHandlerClass
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  SID_Project.View.ScientistPage
+            case 16:   //  SID_Project.Common.RelayCommand
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 17:   //  SID_Project.Model.StationCatalogSingleton
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 18:   //  System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Station>
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<SID_Project.Model.Station>"));
+                userType.CollectionAdd = VectorAdd_18_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 19:   //  System.Collections.ObjectModel.Collection`1<SID_Project.Model.Station>
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_19_Collection;
+                userType.CollectionAdd = VectorAdd_19_Collection;
+                xamlType = userType;
+                break;
+
+            case 20:   //  SID_Project.Model.Station
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_20_Station;
+                userType.AddMemberName("StationId");
+                userType.AddMemberName("StationName");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 21:   //  SID_Project.ViewModel.StationHandlerClass
+                userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 22:   //  SID_Project.View.ScientistPage
                 userType = new global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_ScientistPage;
+                userType.Activator = Activate_22_ScientistPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -410,15 +488,15 @@ namespace SID_Project.SID_Project_XamlTypeInfo
             var that = (global::SID_Project.Model.Task)instance;
             that.Comment = (global::System.String)Value;
         }
-        private object get_5_Task_Stationid(object instance)
+        private object get_5_Task_Stationtaskid(object instance)
         {
             var that = (global::SID_Project.Model.Task)instance;
-            return that.Stationid;
+            return that.Stationtaskid;
         }
-        private void set_5_Task_Stationid(object instance, object Value)
+        private void set_5_Task_Stationtaskid(object instance, object Value)
         {
             var that = (global::SID_Project.Model.Task)instance;
-            that.Stationid = (global::System.Int32)Value;
+            that.Stationtaskid = (global::System.Int32)Value;
         }
         private object get_6_Task_Username(object instance)
         {
@@ -530,15 +608,15 @@ namespace SID_Project.SID_Project_XamlTypeInfo
             var that = (global::SID_Project.ViewModel.TaskViewModel)instance;
             that.Comment = (global::System.String)Value;
         }
-        private object get_17_TaskViewModel_StationId(object instance)
+        private object get_17_TaskViewModel_StationTaskId(object instance)
         {
             var that = (global::SID_Project.ViewModel.TaskViewModel)instance;
-            return that.StationId;
+            return that.StationTaskId;
         }
-        private void set_17_TaskViewModel_StationId(object instance, object Value)
+        private void set_17_TaskViewModel_StationTaskId(object instance, object Value)
         {
             var that = (global::SID_Project.ViewModel.TaskViewModel)instance;
-            that.StationId = (global::System.Int32)Value;
+            that.StationTaskId = (global::System.Int32)Value;
         }
         private object get_18_TaskViewModel_Username(object instance)
         {
@@ -580,6 +658,86 @@ namespace SID_Project.SID_Project_XamlTypeInfo
             var that = (global::SID_Project.ViewModel.TaskViewModel)instance;
             that.Schedule = (global::System.String)Value;
         }
+        private object get_22_StationViewModel_StationCatalogSingleton(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.StationCatalogSingleton;
+        }
+        private void set_22_StationViewModel_StationCatalogSingleton(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.StationCatalogSingleton = (global::SID_Project.Model.StationCatalogSingleton)Value;
+        }
+        private object get_23_StationViewModel_StationsCollection(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.StationsCollection;
+        }
+        private void set_23_StationViewModel_StationsCollection(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.StationsCollection = (global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Station>)Value;
+        }
+        private object get_24_Station_StationId(object instance)
+        {
+            var that = (global::SID_Project.Model.Station)instance;
+            return that.StationId;
+        }
+        private void set_24_Station_StationId(object instance, object Value)
+        {
+            var that = (global::SID_Project.Model.Station)instance;
+            that.StationId = (global::System.Int32)Value;
+        }
+        private object get_25_Station_StationName(object instance)
+        {
+            var that = (global::SID_Project.Model.Station)instance;
+            return that.StationName;
+        }
+        private void set_25_Station_StationName(object instance, object Value)
+        {
+            var that = (global::SID_Project.Model.Station)instance;
+            that.StationName = (global::System.String)Value;
+        }
+        private object get_26_StationViewModel_StationHandler(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.StationHandler;
+        }
+        private void set_26_StationViewModel_StationHandler(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.StationHandler = (global::SID_Project.ViewModel.StationHandlerClass)Value;
+        }
+        private object get_27_StationViewModel_SelectedStation(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.SelectedStation;
+        }
+        private void set_27_StationViewModel_SelectedStation(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.SelectedStation = (global::SID_Project.Model.Station)Value;
+        }
+        private object get_28_StationViewModel_StationId(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.StationId;
+        }
+        private void set_28_StationViewModel_StationId(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.StationId = (global::System.Int32)Value;
+        }
+        private object get_29_StationViewModel_StationName(object instance)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            return that.StationName;
+        }
+        private void set_29_StationViewModel_StationName(object instance, object Value)
+        {
+            var that = (global::SID_Project.ViewModel.StationViewModel)instance;
+            that.StationName = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -618,11 +776,11 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 xamlMember.Getter = get_4_Task_Comment;
                 xamlMember.Setter = set_4_Task_Comment;
                 break;
-            case "SID_Project.Model.Task.Stationid":
+            case "SID_Project.Model.Task.Stationtaskid":
                 userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.Model.Task");
-                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "Stationid", "Int32");
-                xamlMember.Getter = get_5_Task_Stationid;
-                xamlMember.Setter = set_5_Task_Stationid;
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "Stationtaskid", "Int32");
+                xamlMember.Getter = get_5_Task_Stationtaskid;
+                xamlMember.Setter = set_5_Task_Stationtaskid;
                 break;
             case "SID_Project.Model.Task.Username":
                 userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.Model.Task");
@@ -690,11 +848,11 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 xamlMember.Getter = get_16_TaskViewModel_Comment;
                 xamlMember.Setter = set_16_TaskViewModel_Comment;
                 break;
-            case "SID_Project.ViewModel.TaskViewModel.StationId":
+            case "SID_Project.ViewModel.TaskViewModel.StationTaskId":
                 userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.TaskViewModel");
-                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationId", "Int32");
-                xamlMember.Getter = get_17_TaskViewModel_StationId;
-                xamlMember.Setter = set_17_TaskViewModel_StationId;
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationTaskId", "Int32");
+                xamlMember.Getter = get_17_TaskViewModel_StationTaskId;
+                xamlMember.Setter = set_17_TaskViewModel_StationTaskId;
                 break;
             case "SID_Project.ViewModel.TaskViewModel.Username":
                 userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.TaskViewModel");
@@ -719,6 +877,54 @@ namespace SID_Project.SID_Project_XamlTypeInfo
                 xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "Schedule", "String");
                 xamlMember.Getter = get_21_TaskViewModel_Schedule;
                 xamlMember.Setter = set_21_TaskViewModel_Schedule;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.StationCatalogSingleton":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationCatalogSingleton", "SID_Project.Model.StationCatalogSingleton");
+                xamlMember.Getter = get_22_StationViewModel_StationCatalogSingleton;
+                xamlMember.Setter = set_22_StationViewModel_StationCatalogSingleton;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.StationsCollection":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationsCollection", "System.Collections.ObjectModel.ObservableCollection`1<SID_Project.Model.Station>");
+                xamlMember.Getter = get_23_StationViewModel_StationsCollection;
+                xamlMember.Setter = set_23_StationViewModel_StationsCollection;
+                break;
+            case "SID_Project.Model.Station.StationId":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.Model.Station");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationId", "Int32");
+                xamlMember.Getter = get_24_Station_StationId;
+                xamlMember.Setter = set_24_Station_StationId;
+                break;
+            case "SID_Project.Model.Station.StationName":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.Model.Station");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationName", "String");
+                xamlMember.Getter = get_25_Station_StationName;
+                xamlMember.Setter = set_25_Station_StationName;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.StationHandler":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationHandler", "SID_Project.ViewModel.StationHandlerClass");
+                xamlMember.Getter = get_26_StationViewModel_StationHandler;
+                xamlMember.Setter = set_26_StationViewModel_StationHandler;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.SelectedStation":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "SelectedStation", "SID_Project.Model.Station");
+                xamlMember.Getter = get_27_StationViewModel_SelectedStation;
+                xamlMember.Setter = set_27_StationViewModel_SelectedStation;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.StationId":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationId", "Int32");
+                xamlMember.Getter = get_28_StationViewModel_StationId;
+                xamlMember.Setter = set_28_StationViewModel_StationId;
+                break;
+            case "SID_Project.ViewModel.StationViewModel.StationName":
+                userType = (global::SID_Project.SID_Project_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SID_Project.ViewModel.StationViewModel");
+                xamlMember = new global::SID_Project.SID_Project_XamlTypeInfo.XamlMember(this, "StationName", "String");
+                xamlMember.Getter = get_29_StationViewModel_StationName;
+                xamlMember.Setter = set_29_StationViewModel_StationName;
                 break;
             }
             return xamlMember;

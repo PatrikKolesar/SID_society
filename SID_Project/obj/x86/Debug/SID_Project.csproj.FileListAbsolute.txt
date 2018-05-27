@@ -1572,3 +1572,4 @@ C:\Users\Marek\Source\Repos\SID_society\SID_Project\obj\x86\Debug\qualifiers.txt
 C:\Users\Marek\Source\Repos\SID_society\SID_Project\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Marek\Source\Repos\SID_society\SID_Project\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Marek\Source\Repos\SID_society\SID_Project\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Marek\Source\Repos\SID_society\SID_Project\obj\x86\Debug\SID_Project.csprojAssemblyReference.cache

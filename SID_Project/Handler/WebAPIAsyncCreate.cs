@@ -19,7 +19,7 @@ namespace SID_Project.Handler
         private HttpClientHandler _httpClientHandler;
         private HttpClient _httpClient;
 
-        public  async Task<ObservableCollection<T>> Create(T obj, string table)
+        public async Task<ObservableCollection<T>> Create(T obj, string table)
         {
             _httpClientHandler = new HttpClientHandler() {UseDefaultCredentials = true};
             using (_httpClient = new HttpClient(_httpClientHandler))
@@ -30,14 +30,18 @@ namespace SID_Project.Handler
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(obj);
-                    //var response = _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json")).Result;
+                    var response = await _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json"));
+                    if (response.IsSuccessStatusCode)
+                    {
 
                         await _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json"));
+                    }
+                    
 
                 }
                 catch (Exception ex)
                 {
-                    new MessageDialog(ex.Message).ShowAsync();
+                    await new MessageDialog(ex.Message).ShowAsync();
                 }
             }
 

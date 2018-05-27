@@ -36,11 +36,12 @@ namespace SID_Project.Model
             TaskCollection.Remove(deletedTask);
         }
 
-        public  void DoAddTask(Task addedTask)
+        public async void DoAddTask(Task addedTask)
         {
             WebAPIAsyncCreate<Task> createTask = new WebAPIAsyncCreate<Task>();
-            createTask.Create(addedTask, "Tasks");
             TaskCollection.Add(addedTask);
+            await createTask.Create(addedTask, "Tasks");
+            
         }
         public static TaskCatalogSingleton Instance
         {

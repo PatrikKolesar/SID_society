@@ -18,7 +18,8 @@
         <Grid.DataContext>
             <viewModel:TaskViewModel/>
         </Grid.DataContext>
-        
+
+
         <Grid.RowDefinitions>
             <RowDefinition Height="48"/>
             <RowDefinition/>
@@ -62,7 +63,7 @@
                 </StackPanel>
                 <AppBarButton Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ButtonClickPopUpClose"></AppBarButton>
                 <StackPanel Grid.Column="0" Grid.Row="1">
-                    <!--<TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>-->
+                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Comment: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Station ID: " ></TextBlock>
@@ -72,10 +73,10 @@
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Date: " ></TextBlock>
                 </StackPanel>
                 <StackPanel Grid.Column="1" Grid.Row="1">
-                    <TextBox Width="500" ></TextBox>
+                    <TextBox Width="500" Text="{Binding TaskId, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Content, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Comment, Mode=TwoWay}"></TextBox>
-                    <TextBox Width="500" Text="{Binding StationId, Mode=TwoWay}"></TextBox>
+                    <TextBox Width="500" Text="{Binding StationTaskId, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Username, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Instrument, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Schedule, Mode=TwoWay}"></TextBox>
@@ -156,7 +157,7 @@
                 <StackPanel Grid.Column="1" Grid.Row="1">
                 <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.TaskId, Mode=TwoWay}"></TextBlock>
                 <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Content, Mode=TwoWay}"></TextBlock>
-                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Stationid, Mode=TwoWay}"></TextBlock>
+                <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Stationtaskid, Mode=TwoWay}"></TextBlock>
                 <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Date, Mode=TwoWay}"></TextBlock>
                 <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Instrument, Mode=TwoWay}"></TextBlock>
                 <TextBlock HorizontalAlignment="Center" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Schedule, Mode=TwoWay}"></TextBlock>
@@ -193,34 +194,39 @@
               
             </Grid>
         </Popup>
-        
-        
-        
-        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,0,0"  VerticalAlignment="Top" HorizontalAlignment="Center">
-            <TextBlock HorizontalAlignment="Center" Text="Task List"  FontSize="30"></TextBlock>
-        </StackPanel>
 
-        <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False"  IsItemClickEnabled="True"  ItemsSource="{Binding TasksCollection}" 
-                  SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <RelativePanel>
-           
-            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
-                <TextBlock VerticalAlignment="Center" Text="{Binding TaskId, Mode=TwoWay}" FontSize="25"></TextBlock>
-                <TextBlock VerticalAlignment="Center"  Text="{Binding Content, Mode=TwoWay}" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                    <Button Content="Show Details" Width="100" HorizontalAlignment="Center" Click="ButtonClickPopUp1" ></Button>
-                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" Click="ButtonClickPopUp2"></Button>
-                </StackPanel>
-                <CheckBox Margin="40,0,0,0" />
+        <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,0,0">
+
+            
+
+            <StackPanel   VerticalAlignment="Top" HorizontalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Text="Task List"  FontSize="30"></TextBlock>
             </StackPanel>
-                    </RelativePanel>
-                </DataTemplate>
-                </ListView.ItemTemplate>
-        </ListView>
 
+            <ListView Grid.Column="0" Grid.Row="1" ShowsScrollingPlaceholders="False"  IsItemClickEnabled="True"  ItemsSource="{Binding TasksCollection}" 
+                      SelectedItem="{Binding SelectedTask, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <RelativePanel>
+
+                            <StackPanel Height="90" Orientation="Horizontal" Width="1190" >
+                                <TextBlock VerticalAlignment="Center" Text="{Binding TaskId, Mode=TwoWay}" FontSize="25"></TextBlock>
+                                <TextBlock VerticalAlignment="Center"  Text="{Binding Content, Mode=TwoWay}" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
+                                <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
+                                    <Button Content="Show Details" Width="100" HorizontalAlignment="Center" Click="ButtonClickPopUp1" ></Button>
+                                    <Button Content="Show Notes" Width="100" HorizontalAlignment="Center" Click="ButtonClickPopUp2"></Button>
+                                </StackPanel>
+                                <CheckBox Margin="40,0,0,0" />
+                            </StackPanel>
+                        </RelativePanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
         
+        
+
+
 
 
 
@@ -229,71 +235,23 @@
                 <SolidColorBrush Color="Black" Opacity="0.5"></SolidColorBrush>
             </Grid.Background>
 
+         
             <Grid.RowDefinitions>
                 <RowDefinition Height="5*"/>
                 <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-            <ListView Grid.Column="0" Grid.Row="0" ShowsScrollingPlaceholders="False" >
+            </Grid.RowDefinitions>
+            <ListView Grid.Column="0" Grid.Row="0" ShowsScrollingPlaceholders="False" ItemsSource="{Binding StationsCollection, Mode=TwoWay}" SelectedItem="{Binding SelectedStation, Mode=TwoWay}" >
                 <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="300,0,0,0">
                     <TextBlock HorizontalAlignment="Center" Text="Station List" Foreground="White"  FontSize="30"></TextBlock>
                 </StackPanel>
                 <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-               </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-                <StackPanel Height="90" Orientation="Horizontal" Width="700" >
-                    <TextBlock VerticalAlignment="Center" Text="ID" Foreground="White" FontSize="25"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Name: Name" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                    <TextBlock VerticalAlignment="Center"  Text="Station Place: Place" Foreground="White" Width="600"  FontSize="25" Margin="50,0,0,0"></TextBlock>
-                </StackPanel>
-
+                    <TextBlock VerticalAlignment="Center" Text="{Binding StationId, Mode=TwoWay}" Foreground="White" FontSize="25"></TextBlock>
+                    <TextBlock VerticalAlignment="Center"  Text="{Binding StationName, Mode=TwoWay}" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
+                   </StackPanel>
             </ListView>
+            
+            
+
             <Grid Grid.Column="1" Grid.Row="2">
 <Grid.ColumnDefinitions>
     <ColumnDefinition Width="*"></ColumnDefinition>

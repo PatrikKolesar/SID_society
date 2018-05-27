@@ -31,7 +31,7 @@ namespace SID_Project.ViewModel
 
 
 
-            Task createdTask = new Task(_taskViewModel.TaskId, _taskViewModel.Content, _taskViewModel.Comment, _taskViewModel.StationId, _taskViewModel.Username, changedDate, _taskViewModel.Instrument, _taskViewModel.Schedule);
+            var createdTask = new Task(_taskViewModel.TaskId, _taskViewModel.Content, _taskViewModel.Comment, _taskViewModel.StationId, _taskViewModel.Username, changedDate, _taskViewModel.Instrument, _taskViewModel.Schedule);
                
                 
             _taskViewModel.TaskCatalogSingleton.DoAddTask(createdTask);

@@ -11,7 +11,7 @@ using Task = SID_Project.Model.Task;
 
 namespace SID_Project.ViewModel
 {
-    public class TaskViewModel : NotifyPropertyChanged
+    public class TaskViewModel : StationViewModel
     {
         // -------------------Fields-------------------------
 
@@ -75,7 +75,7 @@ namespace SID_Project.ViewModel
         public int TaskId { get; set; }
         public string Content { get; set; }
         public string Comment { get; set; }
-        public int StationId { get; set; }
+        public int StationTaskId { get; set; }
         public string Username { get; set; }
         public DateTimeOffset Date { get; set; }
         public string Instrument { get; set; }

@@ -1,0 +1,2 @@
+C:\Users\Marek\Source\Repos\SID_society\SID_Project\SID_Project.csproj;x86
+C:\Users\Marek\Source\Repos\SID_society\TaskCatalogSingletonTest\TaskCatalogSingletonTest.csproj;x86

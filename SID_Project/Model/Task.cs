@@ -22,19 +22,19 @@ namespace SID_Project.Model
         public int TaskId { get => _taskId; set => _taskId = value; }
         public string Content { get => _content; set => _content = value; }
         public string Comment { get => _comment; set => _comment = value; }
-        public int Stationid { get => _stationid; set => _stationid = value; }
+        public int Stationtaskid { get => _stationid; set => _stationid = value; }
         public string Username { get => _username; set => _username = value; }
         public DateTimeOffset Date { get => _date; set => _date = value; }
         public string Instrument { get => _instrument; set => _instrument = value; }
         public string Schedule { get => _schedule; set => _schedule = value; }
 
 
-        public Task(int taskId, string content, string comment, int stationid, string username, DateTimeOffset date, string instrument, string schedule)
+        public Task(int taskId, string content, string comment, int stationtaskid, string username, DateTimeOffset date, string instrument, string schedule)
         {
             _taskId = taskId;
             _content = content;
             _comment = comment;
-            _stationid = stationid;
+            _stationid = stationtaskid;
             _username = username;
             _date = date;
             _instrument = instrument;

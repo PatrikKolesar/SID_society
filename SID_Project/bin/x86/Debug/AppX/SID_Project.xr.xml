@@ -2,6 +2,10 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="DeleteTaskCommand" />
+    <RootPropertyPathName Name="StationsCollection" />
+    <RootPropertyPathName Name="SelectedStation" />
+    <RootPropertyPathName Name="StationName" />
+    <RootPropertyPathName Name="StationId" />
     <RootPropertyPathName Name="TasksCollection" />
     <RootPropertyPathName Name="SelectedTask" />
     <RootPropertyPathName Name="Content" />
@@ -10,10 +14,10 @@
     <RootPropertyPathName Name="Schedule" />
     <RootPropertyPathName Name="Instrument" />
     <RootPropertyPathName Name="Date" />
-    <RootPropertyPathName Name="Stationid" />
+    <RootPropertyPathName Name="Stationtaskid" />
     <RootPropertyPathName Name="CreateTaskCommand" />
     <RootPropertyPathName Name="Username" />
-    <RootPropertyPathName Name="StationId" />
+    <RootPropertyPathName Name="StationTaskId" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -28,10 +32,10 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="DataContext" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
@@ -96,29 +100,29 @@
       <RootProperty Name="ChildTransitions" />
       <RootProperty Name="Child" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Children" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Width" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="ShowsScrollingPlaceholders" />
-      <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="ItemsSource" />
-      <RootProperty Name="SelectedItem" />
-      <RootProperty Name="ItemTemplate" />
-      <RootProperty Name="Items" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush">
       <RootProperty Name="Color" />
       <RootProperty Name="Opacity" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ShowsScrollingPlaceholders" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Items" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemTemplate" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
