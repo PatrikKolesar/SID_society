@@ -30,6 +30,7 @@ namespace SID_Project.Handler
                 try
                 {
                     string postBody = JsonConvert.SerializeObject(obj);
+                    //chyba niekde tu
                     var response = await _httpClient.PostAsync($"{_serverURL}/{_apiPrefix}/{table}", new StringContent(postBody, Encoding.UTF8, "application/json"));
                     if (response.IsSuccessStatusCode)
                     {

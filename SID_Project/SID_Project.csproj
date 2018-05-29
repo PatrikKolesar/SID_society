@@ -101,6 +101,8 @@
     <Compile Include="e\PrelaunchActivated.cs" />
     <Compile Include="Handler\WebAPIAsyncCreate.cs" />
     <Compile Include="Handler\WebAPIAsyncDelete.cs" />
+    <Compile Include="Login\AccountHelper.cs" />
+    <Compile Include="Login\MicrosoftPassportHelper.cs" />
     <Compile Include="Model\Station.cs" />
     <Compile Include="Model\StationCatalogSingleton.cs" />
     <Compile Include="Model\Task.cs" />

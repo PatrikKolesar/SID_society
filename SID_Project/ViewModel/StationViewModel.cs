@@ -64,6 +64,8 @@ namespace SID_Project.ViewModel
             set
             {
                 _selectedStation = value;
+
+                string s = "i am here";
                 OnPropertyChanged(nameof(SelectedStation));
             }
         }
@@ -82,7 +84,7 @@ namespace SID_Project.ViewModel
         {
             StationsCollection = _stationCatalogSingleton.GetStationsCatalogSingleton();
             SelectedStation = new Model.Station();
-            StationHandler = new StationHandlerClass(this);
+            //StationHandler = new StationHandlerClass(this);
             //CreateStationCommand = new RelayCommand(StationHandler.CreateStation);
             //DeleteStationCommand = new RelayCommand(StationHandler.DeleteStation);
         }

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace SID_Project.Model
 {
-    class User
+    public class User
     {
         private int _userid;
-        private string _username;
+        public string _username;
         private string _password;
 
         public int UserId { get => _userid; set => _userid = value; }

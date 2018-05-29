@@ -12,16 +12,16 @@ namespace SID_Project.ViewModel
 {
     public class StationHandlerClass
     {
-        private StationViewModel _stationViewModel;
+        //private StationViewModel _stationViewModel;
 
-        private DateTimeConverter _dateTimeConverter;
+        //private DateTimeConverter _dateTimeConverter;
 
-        //public Action CreatedStation { get; set; }
+        ////public Action CreatedStation { get; set; }
 
-        public StationHandlerClass(StationViewModel StationViewModel)
-        {
-            _stationViewModel = StationViewModel;
-        }
+        //public StationHandlerClass(StationViewModel StationViewModel)
+        //{
+        //    _stationViewModel = StationViewModel;
+        //}
 
 
        //public void CreateStation()

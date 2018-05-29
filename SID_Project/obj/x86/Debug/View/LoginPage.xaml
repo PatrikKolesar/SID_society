@@ -9,34 +9,37 @@
     <Grid>
         <Grid.Background>
             <ImageBrush
-                ImageSource="../Assets/dd91ee50c064f73e8850935026027086.jpg" ></ImageBrush>
+                ImageSource="../Assets/wallhaven-472783.jpg" Opacity="0.8"></ImageBrush> 
         </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
-            <RowDefinition Height="4*"/>
-        </Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+           </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="8*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="1" Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="3*"/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <TextBlock Foreground="White" FontWeight="Bold" Grid.Column="0" Grid.Row="0" Text="USERNAME:" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-            <TextBlock Foreground="White" FontWeight="Bold" Grid.Column="0" Grid.Row="1" Text="PASSWORD:" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Right"></TextBlock>
-            <TextBox Grid.Column="1" Grid.Row="0" Width="850" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
-            <TextBox Grid.Column="1" Grid.Row="1" Width="850" FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBox>
-        </Grid>
+
         
-        <Button x:ConnectionId='1' Foreground="White" FontWeight="Bold" Grid.Column="1" Grid.Row="2" Content="LOG IN" VerticalAlignment="Center" Width="600" HorizontalAlignment="Center" FontSize="80"                              ></Button>
-       </Grid>
+            <TextBlock Grid.Column="1" Grid.Row="0" Text="Login" FontSize="36" Margin="4" TextAlignment="Center"/>
+        <TextBlock x:ConnectionId='1' Grid.Column="1" Grid.Row="1" x:Name="ErrorMessage" Text="" FontSize="20" Margin="25" Foreground="Red" TextAlignment="Center" />
+        <TextBlock  Grid.Column="1" Grid.Row="1" Text="Enter your username below" Margin="0,0,0,20"
+                       TextWrapping="Wrap" Width="300"
+                       TextAlignment="Center" VerticalAlignment="Top" FontSize="16"/>
+        <TextBox x:ConnectionId='2' VerticalAlignment="Top" Grid.Column="1" Grid.Row="1" x:Name="UsernameTextBox" Margin="50" Width="250"/>
+        <Button x:ConnectionId='3' Grid.Column="1" Grid.Row="1" x:Name="PassportSignInButton" Content="Login" Background="DodgerBlue" Foreground="White" 
+                                                       Width="80" HorizontalAlignment="Center" Margin="0,20"/>
+
+       
+        <Border x:ConnectionId='4' Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3" x:Name="PassportStatus"  Background="#22B14C"
+                    Margin="0,20" Height="50" VerticalAlignment="Bottom" >
+                <TextBlock x:ConnectionId='5' x:Name="PassportStatusText" Text="Microsoft Passport is ready to use!"
+                           Margin="4" TextAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </Border>
+            
+        
+    </Grid>
 </Page>
 

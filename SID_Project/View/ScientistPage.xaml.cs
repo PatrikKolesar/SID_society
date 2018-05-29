@@ -55,11 +55,11 @@ namespace SID_Project.View
 
         }
 
-        private void ButtonClickPopUp3(object sender, RoutedEventArgs e)
-        {
-            ppup3.IsOpen = true;
+        //private void ButtonClickPopUp3(object sender, RoutedEventArgs e)
+        //{
+        //    ppup3.IsOpen = true;
 
-        }
+        //}
         private void ButtonClickPopUpClose(object sender, RoutedEventArgs e)
         {
             ppup.IsOpen = false;

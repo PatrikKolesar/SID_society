@@ -225,6 +225,7 @@ namespace SID_Project.SID_Project_XamlTypeInfo
         private object Activate_18_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::SID_Project.Model.Station>(); }
         private object Activate_19_Collection() { return new global::System.Collections.ObjectModel.Collection<global::SID_Project.Model.Station>(); }
         private object Activate_20_Station() { return new global::SID_Project.Model.Station(); }
+        private object Activate_21_StationHandlerClass() { return new global::SID_Project.ViewModel.StationHandlerClass(); }
         private object Activate_22_ScientistPage() { return new global::SID_Project.View.ScientistPage(); }
         private void VectorAdd_8_ObservableCollection(object instance, object item)
         {

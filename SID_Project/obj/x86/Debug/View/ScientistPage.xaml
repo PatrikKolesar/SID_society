@@ -31,11 +31,14 @@
 
         <CommandBar Background="Gray" Grid.ColumnSpan="2" Height="55" IsOpen="True">
             <AppBarSeparator/>
-            <AppBarButton x:ConnectionId='14' Icon="Back"                          />
+            <AppBarButton x:ConnectionId='13' Icon="Back"                          />
             <AppBarButton Icon="Message"  />
             <AppBarButton Icon="Up" />
             <CommandBar.Content>
-                <TextBlock Text="User: ScientistName     Date: DateTime" Margin="12,14"/>
+                <RelativePanel>
+                <TextBlock Text="Hello Patrik, you logged in at" Margin="12,14"/>
+                <TextBlock Text="{Binding Date.UtcDateTime.UtcNow, Mode=TwoWay}" Margin="212,14"/>
+                </RelativePanel>
             </CommandBar.Content>
         </CommandBar>
 
@@ -61,7 +64,7 @@
                 <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
                     <TextBlock Text="Create a Task" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
-                <AppBarButton x:ConnectionId='12' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
+                <AppBarButton x:ConnectionId='11' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
                 <StackPanel Grid.Column="0" Grid.Row="1">
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
@@ -80,9 +83,9 @@
                     <TextBox Width="500" Text="{Binding Username, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Instrument, Mode=TwoWay}"></TextBox>
                     <TextBox Width="500" Text="{Binding Schedule, Mode=TwoWay}"></TextBox>
-                    <DatePicker Width="500" Date="{Binding Date, Mode=TwoWay}"/>
+                    <DatePicker Width="500" Date="{Binding Date.Date, Mode=TwoWay}"/>
                 </StackPanel>
-                <Button x:ConnectionId='13' Grid.Column="0" Grid.Row="1" Command="{Binding CreateTaskCommand, Mode=TwoWay}"                           Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
+                <Button x:ConnectionId='12' Grid.Column="0" Grid.Row="1" Command="{Binding CreateTaskCommand, Mode=TwoWay}"                           Grid.ColumnSpan="2" HorizontalAlignment="Center" Background="White" Margin="0,80,0,0" FontWeight="Bold" BorderBrush="Black" Content="Add" Height="50" Width="380" ></Button>
             </Grid>
         </Popup>
 
@@ -107,7 +110,7 @@
                 <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
                     <TextBlock Text="Create a Task" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
-                <AppBarButton x:ConnectionId='11' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
+                <AppBarButton x:ConnectionId='10' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
                 <StackPanel Grid.Column="0" Grid.Row="1">
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="ID: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right"  FontSize="20" FontFamily="Bold" Text="Description: "></TextBlock>
@@ -145,7 +148,7 @@
                 <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
                     <TextBlock Text="Details" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
-                <AppBarButton x:ConnectionId='10' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
+                <AppBarButton x:ConnectionId='9' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
                 <StackPanel  Grid.Column="0" Grid.Row="1">
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Task ID: "></TextBlock>
                     <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="Content: "></TextBlock>
@@ -186,7 +189,7 @@
                 <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2">
                     <TextBlock Text="Notes" FontSize="40" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
                 </StackPanel>
-                <AppBarButton x:ConnectionId='9' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
+                <AppBarButton x:ConnectionId='8' Icon="Back" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top"                              ></AppBarButton>
                 
              <StackPanel Grid.Column="0" Grid.Row="1" >
                    <TextBlock HorizontalAlignment="Right" FontSize="20" FontFamily="Bold" Text="{Binding SelectedTask.Comment, Mode=TwoWay}"></TextBlock>
@@ -213,8 +216,8 @@
                                 <TextBlock VerticalAlignment="Center" Text="{Binding TaskId, Mode=TwoWay}" FontSize="25"></TextBlock>
                                 <TextBlock VerticalAlignment="Center"  Text="{Binding Content, Mode=TwoWay}" Width="900"  FontSize="25" Margin="50,0,0,0"></TextBlock>
                                 <StackPanel Margin="30,0,0,0" VerticalAlignment="Center">
-                                    <Button x:ConnectionId='7' Content="Show Details" Width="100" HorizontalAlignment="Center"                           ></Button>
-                                    <Button x:ConnectionId='8' Content="Show Notes" Width="100" HorizontalAlignment="Center"                          ></Button>
+                                    <Button x:ConnectionId='6' Content="Show Details" Width="100" HorizontalAlignment="Center"                           ></Button>
+                                    <Button x:ConnectionId='7' Content="Show Notes" Width="100" HorizontalAlignment="Center"                          ></Button>
                                 </StackPanel>
                                 <CheckBox Margin="40,0,0,0" />
                             </StackPanel>
@@ -240,14 +243,23 @@
                 <RowDefinition Height="5*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="300,0,0,0">
+                <TextBlock HorizontalAlignment="Center" Text="Station List" Foreground="White"  FontSize="30"></TextBlock>
+            </StackPanel>
             <ListView Grid.Column="0" Grid.Row="0" ShowsScrollingPlaceholders="False" ItemsSource="{Binding StationsCollection, Mode=TwoWay}" SelectedItem="{Binding SelectedStation, Mode=TwoWay}" >
-                <StackPanel  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="300,0,0,0">
-                    <TextBlock HorizontalAlignment="Center" Text="Station List" Foreground="White"  FontSize="30"></TextBlock>
-                </StackPanel>
+                
+               
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <RelativePanel>
                 <StackPanel Height="90" Orientation="Horizontal" Width="700" >
                     <TextBlock VerticalAlignment="Center" Text="{Binding StationId, Mode=TwoWay}" Foreground="White" FontSize="25"></TextBlock>
                     <TextBlock VerticalAlignment="Center"  Text="{Binding StationName, Mode=TwoWay}" Foreground="White" Width="270"  FontSize="25" Margin="50,0,0,0"></TextBlock>
                    </StackPanel>
+                        </RelativePanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
             
             
@@ -260,7 +272,7 @@
                 </Grid.ColumnDefinitions>
                 
                 <Button x:ConnectionId='5' Grid.Column="0" Content="Create" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"                         ></Button>
-                <Button x:ConnectionId='6' Grid.Column="1" Content="Edit" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"                          ></Button>
+                <Button Grid.Column="1" Content="Show Tasks" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"></Button>
                 <Button Grid.Column="2" Content="Delete" Command="{Binding DeleteTaskCommand, Mode=TwoWay}" Width="200" Foreground="White" HorizontalAlignment="Center" FontSize="40"></Button>
             </Grid>
         </Grid>
