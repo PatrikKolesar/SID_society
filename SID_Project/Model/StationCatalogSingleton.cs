@@ -14,7 +14,7 @@ namespace SID_Project.Model
         private static StationCatalogSingleton instances;
 
         private static ObservableCollection<Station> StationCollection { get; set; }
-        private WebAPIAsyncLoad<Station> stationApiAsync;
+       
         private StationCatalogSingleton()
         {
             StationCollection = LoadDataToObservableCollection();
@@ -27,20 +27,7 @@ namespace SID_Project.Model
             ObservableCollection<Station> collections = tables.Result;
             return collections;
         }
-        //public async void DoDeleteStationAsync(Station deletedStation)
-        //{
-        //    int key = deletedStation.StationId;
-        //    WebAPIAsyncDelete<Station> deleteStation = new WebAPIAsyncDelete<Station>();
-        //    await deleteStation.Delete("Stations", key);
-        //    StationCollection.Remove(deletedStation);
-        //}
-
-        //public void DoAddStation(Station addedStation)
-        //{
-        //    WebAPIAsyncCreate<Station> createStation = new WebAPIAsyncCreate<Station>();
-        //    createStation.Create(addedStation, "Stations");
-        //    StationCollection.Add(addedStation);
-        //}
+        
         public static StationCatalogSingleton Instances
         {
             get

@@ -25,7 +25,7 @@ namespace SID_Project.View
     /// </summary>
     public sealed partial class LoginPage : Page
     {
-        private User _account;
+     
         public LoginPage()
         {
             this.InitializeComponent();
@@ -62,13 +62,13 @@ namespace SID_Project.View
             if (AccountHelper.ValidateAccountCredentials(UsernameTextBox.Text))
             {
                 // Create and add a new local account
-                _account = AccountHelper.AddAccount(UsernameTextBox.Text);
+                //_account = AccountHelper.AddAccount(UsernameTextBox.Text);
                 Debug.WriteLine("Successfully signed in with traditional credentials and created local account instance!");
 
                 if (await MicrosoftPassportHelper.CreatePassportKeyAsync(UsernameTextBox.Text))
                 {
                     Debug.WriteLine("Successfully signed in with Microsoft Passport!");
-                    Frame.Navigate(typeof(ScientistPage), _account);
+                    Frame.Navigate(typeof(ScientistPage));
                 }
             }
             else

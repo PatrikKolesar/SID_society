@@ -113,7 +113,6 @@
     <Compile Include="Persistency\IWebAPIAsyncDelete.cs" />
     <Compile Include="Persistency\IWebAPIAsyncLoad.cs" />
     <Compile Include="Handler\WebAPIAsyncLoad.cs" />
-    <Compile Include="ViewModel\StationHandler.cs" />
     <Compile Include="ViewModel\StationViewModel.cs" />
     <Compile Include="ViewModel\TaskHandler.cs" />
     <Compile Include="ViewModel\TaskViewModel.cs" />

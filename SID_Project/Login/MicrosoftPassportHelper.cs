@@ -46,17 +46,7 @@ namespace SID_Project.Login
                 case KeyCredentialStatus.Success:
                     Debug.WriteLine("Successfully made key");
 
-                    // In the real world authentication would take place on a server.
-                    // So every time a user migrates or creates a new Microsoft Passport account Passport details should be pushed to the server.
-                    // The details that would be pushed to the server include:
-                    // The public key, keyAttesation if available, 
-                    // certificate chain for attestation endorsement key if available,  
-                    // status code of key attestation result: keyAttestationIncluded or 
-                    // keyAttestationCanBeRetrievedLater and keyAttestationRetryType
-                    // As this sample has no concept of a server it will be skipped for now
-                    // for information on how to do this refer to the second Passport sample
-
-                    //For this sample just return true
+                    
                     return true;
                 case KeyCredentialStatus.UserCanceled:
                     Debug.WriteLine("User cancelled sign-in process.");
@@ -71,24 +61,6 @@ namespace SID_Project.Login
 
             return false;
         }
-        /// <summary>
-        /// Function to be called when user requests deleting their account.
-        /// Checks the KeyCredentialManager to see if there is a Passport for the current user
-        /// Then deletes the local key associated with the Passport.
-        /// </summary>
-        public static async void RemovePassportAccountAsync(User account)
-        {
-            // Open the account with Passport
-            KeyCredentialRetrievalResult keyOpenResult = await KeyCredentialManager.OpenAsync(account.Username);
-
-            if (keyOpenResult.Status == KeyCredentialStatus.Success)
-            {
-                // In the real world you would send key information to server to unregister
-                //e.g. RemovePassportAccountOnServer(account);
-            }
-
-            // Then delete the account from the machines list of Passport Accounts
-            await KeyCredentialManager.DeleteAsync(account.Username);
-        }
+        
     }
 }

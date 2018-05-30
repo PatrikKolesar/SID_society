@@ -15,7 +15,7 @@ namespace SID_Project.Model
         private static TaskCatalogSingleton instance;
 
         private ObservableCollection<Task> TaskCollection { get; set; }
-        private WebAPIAsyncLoad<Task> taskApiAsync;
+        
         private TaskCatalogSingleton()
         {
             TaskCollection = LoadDataToObservableCollection();

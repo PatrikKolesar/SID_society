@@ -13,7 +13,7 @@ namespace SID_Project.Model
         private static UserCatalogSingleton instance;
 
         private ObservableCollection<User> UserCollection { get; set; }
-        //private WebAPIAsyncLoad<Station> stationApiAsync;
+       
         private UserCatalogSingleton()
         {
             UserCollection = LoadDataToObservableCollection();

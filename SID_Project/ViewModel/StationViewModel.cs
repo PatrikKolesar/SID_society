@@ -49,11 +49,6 @@ namespace SID_Project.ViewModel
             }
         }
 
-        public StationHandlerClass StationHandler { get; set; }
-
-        //public RelayCommand CreateStationCommand { get; set; }
-
-        //public RelayCommand DeleteStationCommand { get; set; }
 
         public Model.Station SelectedStation
         {
@@ -65,7 +60,6 @@ namespace SID_Project.ViewModel
             {
                 _selectedStation = value;
 
-                string s = "i am here";
                 OnPropertyChanged(nameof(SelectedStation));
             }
         }
@@ -84,10 +78,7 @@ namespace SID_Project.ViewModel
         {
             StationsCollection = _stationCatalogSingleton.GetStationsCatalogSingleton();
             SelectedStation = new Model.Station();
-            //StationHandler = new StationHandlerClass(this);
-            //CreateStationCommand = new RelayCommand(StationHandler.CreateStation);
-            //DeleteStationCommand = new RelayCommand(StationHandler.DeleteStation);
-        }
+            }
         
     }
 }
